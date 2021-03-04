@@ -1,12 +1,12 @@
 #!groovy 
 // Build Parameters
-properties([ parameters([ 
-string( name: 'AWS_ACCESS_KEY_ID', defaultValue: 'AKIASYIIRCL7Z333YKWW'), 
-string( name: 'AWS_SECRET_ACCESS_KEY', defaultValue: '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') 
-]), pipelineTriggers([]) ]) 
+//properties([ parameters([ 
+//string( name: 'AWS_ACCESS_KEY_ID', defaultValue: 'AKIASYIIRCL7Z333YKWW'), 
+//string( name: 'AWS_SECRET_ACCESS_KEY', defaultValue: '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') 
+//]), pipelineTriggers([]) ]) 
 // Environment Variables 
-env.AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID 
-env.AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY
+env.AWS_ACCESS_KEY_ID = AKIASYIIRCL7Z333YKWW 
+env.AWS_SECRET_ACCESS_KEY = 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
 node { 
 env.PATH += ":/opt/terraform_0.14.7/" 
 stage ('Checkout') { 
