@@ -1,10 +1,14 @@
-provider "aws" {
-  region     = "us-east-1"
+terraform {
+  required_providers {
+    aws = { 
+      source  = "hashicorp/aws"version = "~> 3.0"}
+  }
 }
-
- 
-
-resource "aws_instance" "web" {
-  ami           = "ami-0b9064170e32bde34"
-  instance_type = "t2.micro"
+# Configure the AWS Provider
+provider "aws" {
+  region = "us-east-2"
+}
+# Create a VPC
+resource "aws_vpc" "example" {
+  cidr_block = "10.0.0.0/16"
 }
