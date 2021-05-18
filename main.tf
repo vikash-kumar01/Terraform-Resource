@@ -1,7 +1,6 @@
 # Configure the AWS Provider
 provider "aws" {
-  version = "~> 2.39"
-  region  = "us-east-2"
+  region = "us-east-2"
 }
 
 # Create a VPC
