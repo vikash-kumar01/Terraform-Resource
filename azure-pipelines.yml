@@ -7,9 +7,7 @@ trigger:
 - main
 
 pool:
-  name: MR Agent
-  demands:
-   - agent.name -equals MR Agent
+    vmImage: 'ubuntu'
 
 steps:
 - script: echo Hello, world!
