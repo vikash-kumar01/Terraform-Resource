@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: 'MR Agent'
+  name: MR Agent
+  demands:
+   - agent.name -equals MR Agent
 
 steps:
 - script: echo Hello, world!
